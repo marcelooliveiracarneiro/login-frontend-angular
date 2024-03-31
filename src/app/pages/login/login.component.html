@@ -1,0 +1,28 @@
+<app-default-login-layout title="Login into your account" 
+    buttonPrimaryText="Login now"
+    buttonSecondaryText="Signup now"
+    (submit)="submit()"
+    (navigate)="navigate()"
+    [buttonPrimaryDisble]="!loginForm.valid"
+>
+    <form [formGroup]="loginForm">
+        <app-input-primary
+            formControlName="email"
+            inputName="email"
+            type="email"
+            label="eMail"
+            placeholder="jongo@email.com"
+        >
+            <img src="/assets/svg/icon-email.svg">
+        </app-input-primary>
+        <app-input-primary
+            formControlName="password"
+            inputName="password"
+            type="password"
+            label="Your Password"
+        >
+            <img src="/assets/svg/icon-password.svg">
+        </app-input-primary>
+        <span>Forgot Password?</span>
+    </form>
+</app-default-login-layout>
