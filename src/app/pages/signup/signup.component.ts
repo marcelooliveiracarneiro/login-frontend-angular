@@ -37,8 +37,8 @@ constructor(
 }
 
 submit(){
-  this.loginService.login( this.signupForm.value.email, this.signupForm.value.password ).subscribe({
-    next: () => this.toastService.success("Login feito com sucesso !"),
+  this.loginService.signup(this.signupForm.value.name, this.signupForm.value.email, this.signupForm.value.password).subscribe({
+    next: () => this.toastService.success("Registro feito com sucesso !"),
     error: () => this.toastService.error("Erro inesperado !")
   })
   console.log(this.signupForm.value)
